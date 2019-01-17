@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import ButtonDetails from '../ButtonDetails/ButtonDetails';
 
 const Img = styled.img`
-  position: absolute;
   max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50%;
+  margin-left: -50%;
 `;
 
 const ImgWrap = styled.div`

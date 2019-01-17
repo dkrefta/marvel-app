@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import CryptoJS from 'crypto-js';
 import styled from 'styled-components';
 import moment from 'moment';
-import { ClipLoader } from 'react-spinners';
+import { RingLoader } from 'react-spinners';
 import Nav from '../../components/Nav/Nav';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import CharacterList from '../../components/CharacterList/CharacterList';
@@ -55,7 +55,7 @@ class Home extends Component {
           <CharacterList />
           <div style={{ justifyContent: 'center' }}>
             {this.props.charactersReducer.characters.isLoading ? (
-              <ClipLoader sizeUnit="px" size={50} color="red" />
+              <RingLoader sizeUnit="px" size={50} color="red" />
             ) : null}
           </div>
         </Background>
