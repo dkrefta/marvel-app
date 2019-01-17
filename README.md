@@ -30,7 +30,7 @@ react-testing-library
 
 ## Screenshots
 
-(https://github.com/dkrefta/marvel-app/blob/master/screenshot/recordscreen.gif)
+![](https://github.com/dkrefta/marvel-app/blob/master/screenshot/recordscreen.gif)
 
 
 
