@@ -17,6 +17,7 @@ const Container = styled.div`
   align-items: center;
   background-color: #000 !important;
   margin-bottom: 20px;
+  display: block;
 `;
 
 const Nav = () => (

@@ -20,17 +20,33 @@ const CardBodyText = styled.p`
   padding: 20px;
 `;
 
+const CardHolder = styled.div`
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 0.28571429rem;
+  margin-top: 10px;
+  flex-basis: calc(33.33% - 60px);
+`;
+
 const charactersListItem = props => (
-  <Fragment>
-    <h2>{props.character.name} </h2>
-    <ImgWrap>
-      <Img src={`${props.character.thumbnail.path}.jpg`} alt={props.character.name} />
-    </ImgWrap>
-    <CardBodyText>
-      {props.character.description ? props.character.description : 'Marvel Character'}
-    </CardBodyText>
+  <CardHolder>
+    <div>
+      <h2>{props.character.name} </h2>
+      <ImgWrap>
+        <Img src={`${props.character.thumbnail.path}.jpg`} alt={props.character.name} />
+      </ImgWrap>
+      <CardBodyText>
+        {props.character.description ? props.character.description : 'Marvel Character'}
+      </CardBodyText>
+    </div>
     <ButtonDetails to={`/details-page/${props.character.id}`}>Detalhes</ButtonDetails>
-  </Fragment>
+  </CardHolder>
 );
 
 export default charactersListItem;

@@ -56,7 +56,7 @@ class Home extends Component {
           <CharacterList />
           <div style={{ justifyContent: 'center' }}>
             {this.props.charactersReducer.characters.isLoading ? (
-              <ClipLoader sizeUnit="px" size={150} color="red" />
+              <ClipLoader sizeUnit="px" size={50} color="red" />
             ) : null}
           </div>
         </Background>
