@@ -47,7 +47,6 @@ class Home extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <Fragment>
         <Background>
