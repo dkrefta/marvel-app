@@ -12,7 +12,6 @@ import { marvelApi as config } from '../../config/config';
 
 const Background = styled.div`
   display: flex;
-  background-color: #f2f2f2;
   justify-content: flex-start;
   flex-direction: column;
   flex: 1;

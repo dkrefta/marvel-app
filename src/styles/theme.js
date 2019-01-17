@@ -42,3 +42,9 @@ export const Text = styled.p`
   font-family: 'Open Sans', sans-serif;
   color: ${props => props.color || '#4d4d4d'};
 `;
+
+export const screenSize = {
+  sm: 576,
+  md: 768,
+  lg: 992
+};

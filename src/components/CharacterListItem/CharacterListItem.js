@@ -36,12 +36,25 @@ const CardHolder = styled.div`
   border-radius: 0.28571429rem;
   margin-top: 10px;
   flex-basis: calc(33.33% - 60px);
+  @media screen and (max-width: 500px) {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 0.28571429rem;
+    margin-top: 10px;
+    flex-basis: 100%;
+  }
 `;
 
 const charactersListItem = props => (
   <CardHolder>
     <div>
-      <h2>{props.character.name} </h2>
+      <h1>{props.character.name} </h1>
       <ImgWrap>
         <Img src={`${props.character.thumbnail.path}.jpg`} alt={props.character.name} />
       </ImgWrap>
