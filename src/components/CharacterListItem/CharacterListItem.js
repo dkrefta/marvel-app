@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import ButtonDetails from '../ButtonDetails/ButtonDetails';
 
@@ -42,7 +42,9 @@ const charactersListItem = props => (
         <Img src={`${props.character.thumbnail.path}.jpg`} alt={props.character.name} />
       </ImgWrap>
       <CardBodyText>
-        {props.character.description ? props.character.description : 'Marvel Character'}
+        {props.character.description
+          ? props.character.description
+          : 'Marvel character without description'}
       </CardBodyText>
     </div>
     <ButtonDetails to={`/details-page/${props.character.id}`}>Detalhes</ButtonDetails>
