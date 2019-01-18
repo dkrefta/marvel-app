@@ -102,7 +102,7 @@ class DetailsPage extends Component {
         <Nav />
         <h1>
           {this.state.idCharacter === hero.id && this.state.conditional ? (
-            <Input defaultValue={hero.name} onChange={e => this.changeCharacter(e.target.value)} />
+            <Input defaultValue={hero && hero.name} onChange={e => this.changeCharacter(e.target.value)} />
           ) : (
               hero.name
             )}
@@ -111,13 +111,13 @@ class DetailsPage extends Component {
           </Button>
           <hr />
         </h1>
-        <Img src={`${hero.thumbnail.path}.jpg`} alt={hero.name} />
+        <Img src={`${hero && hero.thumbnail && hero.thumbnail.path}.jpg`} alt={hero && hero.name} />
         <p>{hero.description}</p>
-        <h4>Series({hero.series.available})</h4>
+        <h4>Series({hero && hero.series && hero.series.available})</h4>
         <ul>
-          {hero.series.items.map((series, index) => (
+          {hero && hero.series && hero.series.items.map((series, index) => (
             <div key={index}>
-              <li key={index}>{series.name}</li>
+              <li key={index}>{series && series.name}</li>
             </div>
           ))}
         </ul>
