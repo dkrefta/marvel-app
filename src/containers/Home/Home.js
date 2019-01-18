@@ -52,7 +52,7 @@ class Home extends Component {
           <Nav />
           <SearchBar onChange={e => this.fetchHeroes(e)} />
           <CharacterList />
-          <div style={{ justifyContent: 'center' }}>
+          <div style={{ justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
             {this.props.charactersReducer.characters.isLoading ? (
               <RingLoader sizeUnit="px" size={50} color="red" />
             ) : null}
