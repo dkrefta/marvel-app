@@ -1,5 +1,13 @@
 import React, { Component, Fragment } from 'react';
-import { Input } from '../../styles/theme';
+import styled from 'styled-components';
+
+const Input = styled.input`
+  width: 300px;
+  margin-left: 20px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+`;
 
 class SearchForm extends Component {
   state = {};

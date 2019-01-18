@@ -13,7 +13,7 @@ const Wrapper = styled(Link)`
   }
 `;
 
-const ButtonDetails = ({ to, children, icon, isLoading, ...rest }) => {
+const Button = ({ to, children, icon, isLoading, ...rest }) => {
   let leftIcon;
 
   if (icon) {
@@ -32,12 +32,12 @@ const ButtonDetails = ({ to, children, icon, isLoading, ...rest }) => {
   );
 };
 
-ButtonDetails.defaultProps = {
+Button.defaultProps = {
   appearance: 'primary',
   size: 'default'
 };
 
-ButtonDetails.propTypes = {
+Button.propTypes = {
   appearance: PropTypes.oneOf([
     'primary',
     'info',
@@ -49,4 +49,4 @@ ButtonDetails.propTypes = {
   size: PropTypes.oneOf(['xs', 'default', 'lg'])
 };
 
-export default ButtonDetails;
+export default Button;

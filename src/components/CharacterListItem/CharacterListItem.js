@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ButtonDetails from '../ButtonDetails/ButtonDetails';
+import Button from '../Button/Button';
 
 const Img = styled.img`
   max-width: 100%;
@@ -64,7 +64,7 @@ const charactersListItem = props => (
           : 'Marvel character without description'}
       </CardBodyText>
     </div>
-    <ButtonDetails to={`/details-page/${props.character.id}`}>Detalhes</ButtonDetails>
+    <Button to={`/details-page/${props.character.id}`}>Detalhes</Button>
   </CardHolder>
 );
 

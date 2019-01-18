@@ -11,11 +11,14 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './services/registerServiceWorker';
 
 // redux
-import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
 import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga'; // SAGA
 import rootReducers from './redux/rootReducers';
 import rootSagas from './redux/rootSagas';
+
+import theme from './styles/theme'
 
 // Router
 import MyRouter from './router/router';
@@ -23,6 +26,7 @@ import { HashRouter } from 'react-router-dom';
 
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware();
+
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -38,6 +42,6 @@ ReactDOM.render(
     </HashRouter>
   </Provider>
   , document.getElementById('root'));
-
+ 
 registerServiceWorker();
 

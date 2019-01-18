@@ -1,50 +1,88 @@
-import styled from 'styled-components';
+import pxToRem from './pxToRem';
+import colors from './colors';
 
-export const Form = styled.form`
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+const buttonSizes = {
+  xs: 0,
+  default: pxToRem(10),
+  lg: pxToRem(16)
+};
 
-export const Input = styled.input`
-  width: 300px;
-  margin-left: 20px;
-  height: 35px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-`;
+const buttonBorderRadius = {
+  default: 0,
+  rounded: '10px'
+};
 
-export const Button = styled.button`
-  width: 300px;
-  height: 35px;
-  background-color: #5995ef;
-  color: #fff;
-  border-radius: 3px;
-`;
+export default {
+  fontFamily: `'Open sans', sans-serif`,
+  fontSize: '1rem',
 
-// Text
-export const Title = styled.h1`
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
-  font-size: 1.5em;
-  margin: 0;
-  padding: 0;
-`;
+  /**
+   * breakpoints followed from bootstrap
+   */
+  breakpoints: [
+    '36em', // 576px
+    '48em', // 768px
+    '62em', // 992px
+    '75em' // 1200px
+  ],
 
-export const Title2 = styled.h2`
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
-  font-size: 1.5em;
-`;
+  colors,
 
-export const Text = styled.p`
-  font-family: 'Open Sans', sans-serif;
-  color: ${props => props.color || '#4d4d4d'};
-`;
-
-export const screenSize = {
-  sm: 576,
-  md: 768,
-  lg: 992
+  button: {
+    appearance: {
+      primary: {
+        backgroundImage: 'none',
+        backgroundColor: colors.v3,
+        color: colors.v4,
+        border: colors.v5,
+        borderRadius: buttonBorderRadius.rounded,
+        active: 'transparent',
+        size: buttonSizes
+      },
+      info: {
+        backgroundImage: `linear-gradient(to right,#486ccc,#4c96cb)`,
+        backgroundColor: 'transparent',
+        color: colors.v3,
+        border: 'transparent',
+        borderRadius: buttonBorderRadius.rounded,
+        active: 'transparent',
+        size: buttonSizes
+      },
+      danger: {
+        backgroundImage: `linear-gradient(to right,#cc4872,${colors.v8})`,
+        backgroundColor: 'transparent',
+        color: colors.v3,
+        border: 'transparent',
+        borderRadius: buttonBorderRadius.rounded,
+        active: 'transparent',
+        size: buttonSizes
+      },
+      ghost: {
+        backgroundImage: 'none',
+        backgroundColor: 'transparent',
+        color: colors.v4,
+        border: 'transparent',
+        borderRadius: buttonBorderRadius.rounded,
+        active: 'transparent',
+        size: buttonSizes
+      },
+      ghostSuccess: {
+        backgroundImage: 'none',
+        backgroundColor: 'transparent',
+        color: colors.v7,
+        border: 'transparent',
+        borderRadius: buttonBorderRadius.rounded,
+        active: 'transparent'
+      },
+      textSuccess: {
+        backgroundImage: 'none',
+        backgroundColor: 'transparent',
+        color: colors.v7,
+        border: 'transparent',
+        borderRadius: buttonBorderRadius.default,
+        active: 'transparent'
+      }
+    },
+    size: buttonSizes
+  }
 };

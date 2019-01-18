@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import Nav from '../../components/Nav/Nav';
 import { SAVE_NAME } from '../../redux/characters/types';
-import { Input } from '../../styles/theme';
 
 const Img = styled.img`
   display: flex;
@@ -12,6 +11,13 @@ const Img = styled.img`
   top: 50%;
   height: 100%;
   width: auto;
+`;
+const Input = styled.input`
+  width: 300px;
+  margin-left: 20px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background-color: #fff;
 `;
 
 const Wrap = styled.div`

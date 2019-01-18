@@ -1,7 +1,7 @@
 import React from 'react';
 
 // styled-components
-import GlobalStyle from '../styles/GlobalStyles';
+import GlobalStyle from '../styles/GlobalStyle';
 
 const Layout = props => (
   <React.Fragment>

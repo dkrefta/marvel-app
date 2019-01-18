@@ -15,12 +15,14 @@ class SearchBar extends Component {
           component={SearchForm}
           type="text"
           onChange={debounce(this.props.onChange, 2000)}
+          data-testid="SearchBar"
         />
       </div>
     );
   }
 }
 
+// eslint-disable-next-line no-class-assign
 SearchBar = reduxForm({
   form: 'SearchForm'
 })(SearchBar);
